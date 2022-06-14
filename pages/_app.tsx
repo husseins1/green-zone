@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 
 const colors = {
   brand:{
-    900:'##08743B',
+    solid:'#08743B',
     light:'#30B44A',
     grey:'#D9D9D8'
   }

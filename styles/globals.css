@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+:root{
+  --color-solid: #08743B;
+  --color-light:#30B44A;
+  --color-grey:#D9D9D8
+}
+
 html,
 body {
   padding: 0;
