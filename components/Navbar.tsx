@@ -70,7 +70,7 @@ const Navbar:FC = ()=> {
       
       `}
     </style>
-    <Flex p={{base:"4", lg:"0"}} py={{lg:"8"}} alignItems="center" justifyContent={"space-between"}>
+    <Flex  py={{lg:"8"}} alignItems="center" justifyContent={"space-between"}>
         <Box><img  src="/logo.svg" alt="logo" /></Box>
 
         <Flex display={{base:"none",lg:"flex"}} alignItems={"center"} justifyContent={"center"}  >

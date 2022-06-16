@@ -1,5 +1,12 @@
+.home{
+    /* background:#F3FCF7; */
+    padding:1rem
+}
+
+
+
 @media screen and (min-width: 62em){
-    .main{
+    .home{
         padding:0rem 5rem;
     }
 }

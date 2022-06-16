@@ -9,7 +9,8 @@ const colors = {
     solid:'#08743B',
     light:'#30B44A',
     grey:'#D9D9D8'
-  }
+  },
+  myColor:'#F3FCF7'
 }
 
 const theme = extendTheme({colors,

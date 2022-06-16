@@ -1,1 +1,6 @@
 export {default as Navbar} from "./Navbar"
+export {default as MenuIcon} from "./MenuIcon"
+export {default as Landing} from "./Landing"
+export {default as SectionBreak} from "./SectionBreak"
+export {default as AboutUs} from "./AboutUs"
+export {default as Contact} from "./Contact"
