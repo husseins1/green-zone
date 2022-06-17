@@ -2,7 +2,7 @@ import { Box } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { AboutUs, Contact, Landing, Navbar, SectionBreak } from '../components'
+import { AboutUs, Contact, Landing, Menu, Navbar, SectionBreak } from '../components'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -20,8 +20,10 @@ const Home: NextPage = () => {
         <Landing />
 
         </section>
+
         {/* <SectionBreak /> */}
         <AboutUs />
+        <Menu />
         <Contact />
       </main>
 
