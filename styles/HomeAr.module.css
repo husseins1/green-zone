@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap');
+
+.container{
+    font-family: 'Tajawal', sans-serif;
+}
+.home {
+    /* background:#F3FCF7; */
+    padding: 1rem
+}
+
+
+
+@media screen and (min-width: 62em) {
+    .home {
+        padding: 0rem 5rem;
+    }
+}

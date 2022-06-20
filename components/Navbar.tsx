@@ -4,16 +4,17 @@ import MenuIcon from "./MenuIcon";
 import {
     Drawer,
     DrawerBody,
-    DrawerFooter,
-    DrawerHeader,
     DrawerOverlay,
     DrawerContent,
     DrawerCloseButton,
 } from '@chakra-ui/react'
 
-const Navbar:FC = ()=> {
+const Navbar = ({lang}:{lang:string})=> {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const btnRef = useRef<HTMLButtonElement>(null)
+    const btnRef = useRef<HTMLButtonElement>(null);
+  const about = useRef<HTMLAnchorElement>(null)
+  const menu = useRef<HTMLAnchorElement>(null)
+  const contact = useRef<HTMLAnchorElement>(null)
   return (
 
     <>
@@ -74,10 +75,10 @@ const Navbar:FC = ()=> {
         <Box><img  src="/logo.svg" alt="logo" /></Box>
 
         <Flex display={{base:"none",lg:"flex"}} alignItems={"center"} justifyContent={"center"}  >
-          <Box ><a className="link hover lg" href="#home">Home</a></Box>
-          <Box><a className="link hover lg" href="#about">About Us</a></Box>
-          <Box><a className="link hover lg" href="#services">Services</a></Box>
-          <Box><a className="link hover lg" href="#contact">Contact</a></Box>
+          <Box><a ref={about} className="link hover lg" href="#about">{lang === "ar" ? "من نحن" : "About Us"}</a></Box>
+          <Box><a ref={menu} className="link hover lg" href="#menu">{lang === "ar" ? "المنيو" : "Menu"}</a></Box>
+          <Box><a ref={contact} className="link hover lg" href="#contact">{lang === "ar" ? "تواصل" : "Contact"}</a></Box>
+          <Box ><a className="link hover lg" href={lang === "ar" ? "/" : "/ar"}>{lang === "ar" ? "En" : "Ar"}</a></Box>
         </Flex>
           <Button display={{base:"inline-flex",lg:"none"}} py="6" border={"none"}  ref={btnRef} bg="none" textColor={"black"}  _hover={{
             "color":"brand.light",
@@ -92,6 +93,7 @@ const Navbar:FC = ()=> {
               <MenuIcon  />
           </Button>
           <Drawer
+          blockScrollOnMount={false}
               isOpen={isOpen}
               placement='top'
               onClose={onClose}
@@ -107,10 +109,37 @@ const Navbar:FC = ()=> {
 
                   <DrawerBody >
                      <Flex alignItems={"center"} justifyContent={"center"} flexDirection="column" minHeight={"100vh"} >
-                      <Box ><a className="link hover" href="#home">Home</a></Box>
-                      <Box><a className="link hover" href="#about">About Us</a></Box>
-                      <Box><a className="link hover" href="#services">Services</a></Box>
-                      <Box><a className="link hover" href="#contact">Contact</a></Box>
+                      <Box ><a  className="link hover" onClick={()=>{
+
+                  
+                        onClose();
+                        setTimeout(()=>{
+                          about.current?.click()
+
+                        },500)
+                       
+                      }} >{lang === "ar" ? "من نحن" : "About Us"}</a></Box>
+                <Box><a className="link hover" onClick={() => {
+
+
+                  onClose();
+                  setTimeout(() => {
+                    menu.current?.click()
+
+                  }, 500)
+
+                }}>{lang === "ar" ? "المنيو" : "Menu"} </a></Box>
+                <Box><a className="link hover" onClick={() => {
+
+
+                  onClose();
+                  setTimeout(() => {
+                    contact.current?.click()
+
+                  }, 500)
+
+                }}>{lang === "ar" ? "تواصل" : "Contact"}</a></Box>
+                      <Box><a className="link hover" href={lang === "ar" ? "/" : "/ar"}>{lang === "ar" ? "En" : "Ar"}</a></Box>
                      </Flex>
                   </DrawerBody>
 

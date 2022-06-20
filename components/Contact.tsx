@@ -1,7 +1,7 @@
 import { Box, Button, Flex, Input, Stack, Text, Textarea, useToast } from '@chakra-ui/react'
 import {FormEvent, useRef, useState} from 'react'
 import emailjs from '@emailjs/browser';
-export default function Contact() {
+export default function Contact({lang}:{lang:string}) {
 
     const name = useRef<HTMLInputElement | null>(null);
     const email = useRef<HTMLInputElement | null>(null);
@@ -68,27 +68,29 @@ export default function Contact() {
         `}
     </style>
     
-          <Flex marginY={"8"} justifyContent={"center"} width={{lg:"85%"}} marginX="auto" alignItems="center"  bgImage={"/Contact.jpg"} bgSize="cover" >
+          <Flex id="contact" marginY={"8"} justifyContent={"center"} width={{lg:"85%"}} marginX="auto" alignItems="center"  bgImage={"/Contact.jpg"} bgSize="cover" >
 
     <form ref={form} onSubmit={handleSubmit}>
         <Stack maxWidth={"600px"} spacing={"6"} color="white" textAlign={"center"}  p="8"  >
             <Text fontWeight={"600"} fontSize="4xl">
-                Contact
+                
+                {lang === "en"?"Contact":"التواصل"}
             </Text>
             <Text  fontSize="xl">
-                Feel Free To Contact Us And We Will Talk To You
+                          {lang === "en" ? "Feel Free To Contact Us And We Will Talk To You" : "اتواصل ويانة وشاركنا رايك بالاكل او للاستفسار"}
+                
             </Text>
                  <Input required name='name' ref={name} borderRadius="none" _focusVisible={{
                     borderColor:"brand.light"
-                }} variant='outline' placeholder='Name' />
+                }} variant='outline' placeholder={lang==="en"?'Name':"الاسم"} />
                  <Input required name='email' ref={email} borderRadius="none" _focusVisible={{
                      borderColor:"brand.light"
-                 }} variant='outline' placeholder='Email' />
+                      }} variant='outline' placeholder={lang === "en" ? 'Email' : "البريد الالكتروني"} />
                   <Textarea required name='message' ref={message} borderRadius="none" _focusVisible={{
                       borderColor: "brand.light"
-                    }} placeholder='Your Message'  />
+                      }} placeholder={lang === "en" ? 'Message' : "الرسالة"}  />
                   <Button disabled={click} type='submit' marginY={"8"} width={{ base: "100%", lg: "unset" }} background={"brand.solid"} borderRadius="0" px={{ lg: "16" }} p="6" fontSize="xl" colorScheme={"teal"} >
-                      Send
+                          {lang === "en" ? 'Send' : "ارسال"}
                   </Button>
         </Stack>
         
@@ -119,7 +121,7 @@ export default function Contact() {
 
                     </Box>
                     <Text marginBottom="8" textAlign={"center"} fontSize="lg">
-                  Designed By <a className="panda" target="_blank" href='https://www.instagram.com/green.zone.iq/' rel="noreferrer" >Panda</a>
+                  Designed By <a className="panda" target="_blank" href='https://new-panda-portfolio.vercel.app/' rel="noreferrer" >Panda</a>
                     </Text>
          </footer>
     </>
