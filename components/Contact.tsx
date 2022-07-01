@@ -68,7 +68,7 @@ export default function Contact({lang}:{lang:string}) {
         `}
     </style>
     
-          <Flex id="contact" marginY={"8"} justifyContent={"center"} width={{lg:"85%"}} marginX="auto" alignItems="center"  bgImage={"/Contact.jpg"} bgSize="cover" >
+          <Flex id="contact" marginY={"8"} justifyContent={"center"} width={{lg:"85%"}} marginX="auto" alignItems="center" bgPosition={"bottom"}  bgImage={"/Contact.jpg"} bgSize="cover" >
 
     <form ref={form} onSubmit={handleSubmit}>
         <Stack maxWidth={"600px"} spacing={"6"} color="white" textAlign={"center"}  p="8"  >
@@ -98,9 +98,9 @@ export default function Contact({lang}:{lang:string}) {
          </Flex>
          <footer>
                 <Box p="8" textAlign={"center"}>
-                    <img className='logo' src="/logo.svg" alt="logo" width={170} />
+                    <img className='logo' src="/green zone-02.svg" alt="logo" width={170} />
                     <Text fontSize={"xl"}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, odio.
+                      {lang === "en" ?"We strive to provide a space where guests can connect with themselves and explore their full potential, offering a safe place.":"نحن نعمل جاهدين على تقديم افضل واجود انواع السلطات الصحية."}
                     </Text>
                     <Flex  marginY="4" alignItems={"center"} justifyContent={"center"}>
 

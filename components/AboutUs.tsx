@@ -10,23 +10,23 @@ const services = [
     {
         en:{
             title:"Free Shipping",
-            subtitle:"Orders over 140$",
+            subtitle:"Orders over 15K IQD",
 
         },
         ar:{
             title:"توصيل مجاني",
-            subtitle:"للطلبات فوك 20 الف"
+            subtitle:"للطلبات فوك 15 الف"
         },
     url:"/truck.svg",
 },
     {
         en:{
             title:"Quick Payment",
-            subtitle:"100% secure payment",
+            subtitle:"Order Online",
 
         },
         ar:{
-            title:"دفع سريع",
+            title:"اطلب اونلاين",
             subtitle:"دفع عند التوصيل"
         },
     url:"/wallet.svg",
@@ -35,23 +35,23 @@ const services = [
         en:{
 
             title:"Special Promo",
-            subtitle:"Get special promo",
+            subtitle:"50% every sunday",
         },
         ar:{
 
             title:"خصم خاص",
-            subtitle:"50% خصم",
+            subtitle:"50% كل احد",
         },
     url:"/percentage.svg",
 },
     {
         en:{
-            title:"24/7 Support",
+            title:"6464",
             subtitle:"Ready support",
 
         },
         ar:{
-            title:"24/7 مفتحين",
+            title:"6464",
             subtitle:"دعم جاهز على 6464",
 
         },
@@ -107,7 +107,7 @@ export default function AboutUs({lang}:{lang:"en" | "ar"}) {
     <Box width={{base:"80%",md:"max-content"}} display="flex" justifyContent={"center"} marginX="auto" marginRight={{md:lang==="en"?"10":"0px"}} marginLeft={{md:lang==="en"?"0px":"10"}}>
 
         <Box bgColor="myColor" width="fit-content"  marginX={"auto"}  p="8" paddingTop={"0"} display={"flex"}  justifyContent="center"  >
-            <Image width={445} loading="lazy" height={513}  src="/About.jpg" alt="About" />
+            <Image objectFit="cover" width={445} loading="lazy" height={513}  src="/About.jpg" alt="About" />
         </Box>
     </Box>
         <Box flexBasis={"50%"} display={"flex"} flexDirection="column" marginTop={{base:"8",md:"0"}} textAlign={{base:"center",md:lang==="en"?"left":"right"}}>
@@ -117,30 +117,20 @@ export default function AboutUs({lang}:{lang:"en" | "ar"}) {
                       
                       <ListItem textAlign={"left"} display={"flex"} alignItems="start" >
                           <CheckIcon lang={lang}  />
-                          {lang === "en" ?"Be Alive With Veggie Food.":"كن منتعشا مع الاكل الصحي"}
+                          {lang === "en" ?"Be Alive With Veggie Food.":"اكل صحي وطازج"}
                           
                       </ListItem>
                       <ListItem textAlign={"left"} display={"flex"} alignItems="start" >
                           <CheckIcon lang={lang}  />
-                          {lang === "en" ? "It's The Place To Be." : "انه المكان الامثل"}
+                          {lang === "en" ? "Customize Your Order" : "سوي سلط على ذوقك"}
                           
                       </ListItem>
                       <ListItem textAlign={"left"} display={"flex"} alignItems="start" >
                           <CheckIcon lang={lang}  />
-                          {lang === "en" ? " Nonstop Veggie Food." : "اشبع صحة"}
+                          {lang === "en" ? "Take It Everywhere" : "خليها وياك بكل مكان"}
                          
                       </ListItem>
-                      <ListItem textAlign={"left"} display={"flex"} alignItems="start" >
-
-                          <CheckIcon lang={lang}  />
-                          {lang === "en" ? "The Best Silk Dish In Town" : "افضل السلطات في المنطقة"}
-                          
-                      </ListItem>
-                      <ListItem textAlign={"left"} display={"flex"} alignItems="start" >
-                          <CheckIcon lang={lang}  />
-                          {lang === "en" ? "Truffles, Egg & Pumpkin Spice" : "سوي سلطة على ذوقك"}
-                          
-                      </ListItem>
+                      
                   </List>
 
         </Box>
@@ -151,7 +141,7 @@ export default function AboutUs({lang}:{lang:"en" | "ar"}) {
     <Box order={"2"} width={{base:"80%",md:"max-content"}} display="flex" justifyContent={"center"} marginX="auto" >
 
         <Box bgColor="myColor" width="fit-content"  marginX={"auto"}  p="8" paddingTop={"0"} display={"flex"}  justifyContent="center"  >
-            <Image width={445}  objectFit="cover" loading="lazy" height={513}  src="/Drinks.jfif" alt="Drinks" />
+            <Image width={445}  objectFit="cover" loading="lazy" height={513}  src="/About-2.jpg" alt="Drinks" />
         </Box>
     </Box>
               <Box order={"1"} flexBasis={"50%"} display={"flex"} flexDirection="column" marginTop={{ base: "8", md: "0" }} textAlign={{ base: "center", md: lang === "en" ? "left" : "right" }}  alignItems={{base:"center",lg:lang==="en"?"flex-end":"flex-start"}} >
@@ -164,30 +154,20 @@ export default function AboutUs({lang}:{lang:"en" | "ar"}) {
                       
                           <ListItem textAlign={"left"} display={"flex"} alignItems="start" >
                               <CheckIcon lang={lang} />
-                              {lang === "en" ? "Be Alive With Veggie Food." : "كن منتعشا مع الاكل الصحي"}
+                              {lang === "en" ? "Be Alive With Veggie Food." : "اكل صحي وطازج"}
 
                           </ListItem>
                           <ListItem textAlign={"left"} display={"flex"} alignItems="start" >
                               <CheckIcon lang={lang} />
-                              {lang === "en" ? "It's The Place To Be." : "انه المكان الامثل"}
+                              {lang === "en" ? "Customize Your Order" : "سوي سلط على ذوقك"}
 
                           </ListItem>
                           <ListItem textAlign={"left"} display={"flex"} alignItems="start" >
                               <CheckIcon lang={lang} />
-                              {lang === "en" ? " Nonstop Veggie Food." : "اشبع صحة"}
+                              {lang === "en" ? "Take It Everywhere" : "خليها وياك بكل مكان"}
 
                           </ListItem>
-                          <ListItem textAlign={"left"} display={"flex"} alignItems="start" >
-
-                              <CheckIcon lang={lang} />
-                              {lang === "en" ? "The Best Silk Dish In Town" : "افضل السلطات في المنطقة"}
-
-                          </ListItem>
-                          <ListItem textAlign={"left"} display={"flex"} alignItems="start" >
-                              <CheckIcon lang={lang} />
-                              {lang === "en" ? "Truffles, Egg & Pumpkin Spice" : "سوي سلطة على ذوقك"}
-
-                          </ListItem>
+                         
                   </List>
             </Box>
 

@@ -22,7 +22,7 @@ export default function Landing({lang}:{lang:string}) {
       <Box flex={"1 0 50%"}>
         
         <motion.div  initial={{ x:lang==="en"?500: -500 }}
-          whileInView={{ x:0}}
+          animate={{x:0}}
           transition={{duration:.5}}
           viewport={{ once: true }} >
           <Image style={{

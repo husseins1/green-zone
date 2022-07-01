@@ -130,7 +130,7 @@ const items:item[] = [
     },
     {
       ar:{
-        title:"سلطة البحر الاحمر",
+        title:"سلطة البحر الابيض",
         ingredients:[
             "مكعبات جبن",
             "خيار",
@@ -333,7 +333,7 @@ export default function Menu({lang}:{lang:"ar" | "en"}) {
     </Container>
           <Modal   size={{base:"sm",md:"2xl",lg:"4xl"}} isOpen={isOpen} onClose={onClose}>
               <ModalOverlay   />
-              <ModalContent bg="teal" color={"white"} >
+              <ModalContent bg="white" color={"teal"} >
                   <ModalHeader>{select[lang]?.title}</ModalHeader>
           <ModalCloseButton  />
                   <ModalBody 
@@ -346,10 +346,10 @@ export default function Menu({lang}:{lang:"ar" | "en"}) {
                       }}  loading='lazy'src={select.url} alt={select[lang].title} width={400} height={400} />
                    
                     <Text marginBottom={"4"} fontSize={"2xl"}>{lang ==="en"?"Ingredients":"المكونات"}</Text>
-                      <List spacing={2}>
+                      <List display={"flex"}  alignItems="center" >
                         {select[lang].ingredients.map((ele,index)=>(
-                          <ListItem dir={lang==="en"?'ltr':'rtl'} fontSize={"md"} key={index} textAlign={"left"} display={"flex"} alignItems="center" >
-                              <CheckIcon lang={lang} size={16} color="#fff" />
+                          <ListItem  marginX={"2"} dir={lang==="en"?'ltr':'rtl'} fontSize={"md"} key={index} textAlign={"left"} display={"flex"} alignItems="center" >
+                              <CheckIcon lang={lang} size={16} color="var(--color-light)" />
                               {ele}
                           </ListItem>
 
