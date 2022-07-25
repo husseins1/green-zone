@@ -121,7 +121,7 @@ export default function Contact({lang}:{lang:string}) {
 
                     </Box>
                     <Text marginBottom="8" textAlign={"center"} fontSize="lg">
-                  Designed By <a className="panda" target="_blank" href='https://new-panda-portfolio.vercel.app/' rel="noreferrer" >Panda</a>
+                  Designed By <a className="panda" target="_blank" href='https://panda-prog.com/' rel="noreferrer" >Panda</a>
                     </Text>
          </footer>
     </>
